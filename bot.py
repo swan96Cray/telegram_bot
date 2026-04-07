@@ -1,7 +1,8 @@
 import telebot
 from telebot.types import ReplyKeyboardMarkup, KeyboardButton
+import os  # 👈 ДОБАВИТЬ
 
-TOKEN = "8671080123:AAEyGSUVsFoaNMY6oux9srNyvit1LNrpyjA"
+TOKEN = os.environ.get("TOKEN")  # 👈 ИЗМЕНИТЬ
 
 bot = telebot.TeleBot(TOKEN)
 
